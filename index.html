@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Responder Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <i class="fa-solid fa-server"></i>
+          <span>Auto Responder</span>
+        </div>
+        <div class="top-bar">
+          <a href="#">
+            <i class="fa-solid fa-house"></i>
+          </a>
+          <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="container">
+       <div class="main-content">
+        <div class="server-status">
+            <h2><span id="serverName">AKBARDEV</span>
+                 <i class="fa-solid fa-bolt"></i>:<span id="serverPort">5001</span>
+                 <span id="serverStatus">Starting</span>
+            </h2>
+        </div>
+
+        <div class="nav-bar">
+            <a href="#" class="active">Console</a>
+            <a href="#">Files</a>
+            <a href="#">Databases</a>
+            <a href="#">Schedules</a>
+            <a href="#">Users</a>
+            <a href="#">Backups</a>
+            <a href="#">Network</a>
+        </div>
+
+        <div class="grid-container">
+             <div class="item">
+                <div class="header">CPU Load</div>
+                <div class="content"><span id="cpuLoad">0.00</span>% / ∞</div>
+             </div>
+              <div class="item">
+                <div class="header">Memory</div>
+                <div class="content"><span id="memoryUsage">202.02</span> MiB / 2...</div>
+             </div>
+            <div class="item">
+                 <div class="header">Disk</div>
+                <div class="content"><span id="diskUsage">561.96</span> MiB / 2...</div>
+             </div>
+            <div class="item">
+                 <div class="header">Network (Inbound)</div>
+                <div class="content"><span id="netInbound">1.16</span> MiB</div>
+             </div>
+            <div class="item">
+                 <div class="header">Network (Outbound)</div>
+                <div class="content"><span id="netOutbound">636.29</span> KiB</div>
+            </div>
+        </div>
+
+        <div class="control-buttons">
+            <button class="btn-start"><i class="fas fa-play"></i> Start</button>
+            <button class="btn-restart"><i class="fas fa-sync-alt"></i> Restart</button>
+            <button class="btn-stop"><i class="fas fa-power-off"></i> Stop</button>
+        </div>
+       </div>
+    </div>
+    <div class="console">
+      <div class="console-input">
+        <i class="fas fa-angle-double-right"></i> 
+        <input type="text" id="commandInput" placeholder="Type a command...">
+      </div>
+      <div class="console-output" id="consoleOutput">
+        
+      </div>
+      <div class="cpu-graph">
+        <div class="header">CPU Load</div>
+        <div class="graph-content">
+          <span class="percent-top">1.00%</span>
+          <span class="percent-bottom">0.50%</span>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+          </html>
